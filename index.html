@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Draw 2D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+      body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed;
+}
+#navigation{
+  display: flex;
+   font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  object-fit:cover;
+  padding: 5px;
+  border: 3px solid black;
+  clear: both;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    border-bottom: 3px solid #e92121;
+    background: #ff0000;
+    width: 80%;
+    margin: 0 auto;
+}
+button{
+  margin: 4px;
+   font-family: 'Roboto', sans-serif;
+}
+#canvas{
+background-color: #f3f3f3;
+ font-family: 'Roboto', sans-serif;
+}
+a {
+    background: #69c;
+    color: #fff;
+    padding: 8px 16px;
+     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+      border-radius: 4px;
+}
+button{
+background: #69c;
+    color: #fff;
+     font-family: 'Roboto', sans-serif;
+    padding: 8px 16px;  
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+::-webkit-input-placeholder { /* Edge */
+   opacity: 95;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  opacity: 0.;
+}
+
+::placeholder {
+   opacity: 0.9;
+}
+#submit-hex{
+background: #69c;
+    color: #fff;
+     padding: 5px;
+    border: none;
+    cursor: pointer;
+      border-radius: 4px;
+       font-family: 'Roboto', sans-serif;
+}
+
+      </style>
+  </head>
+  <body onresize="resize_canvas()">
+      <div id = "navigation">
+       
+     <form>
+       <label>Brush Thickness:</label> 
+     <input type = "range" min = "1"value = "10" max = "100" id = "thickness"/>
+     <input type = "number" min = "1" value = "10" max = "100" id = "number"/>
+    </form>
+    <label style = "margin-left:2.5rem">Colors:</label>
+    <button id = "black">Black</button>
+<button id = "red">Red</button>
+<button id = "blue">Blue</button>
+<button id = "purple">Purple</button>
+<button id = "pink">Pink</button>
+<button id = "yellow">Yellow</button>
+<button id = "orange">Orange</button>
+<button id = "green">Green</button>
+<button id = "brown">Brown</button>
+<form>
+       <label style = "margin-left:2.5rem">Hex Colour:</label>
+     <input type = "text" id = "text-hex" placeholder="Type in hex value (#....)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type = "submit" value = "Submit" id = "submit-hex"/>
+    </form>
+ <label style = "margin-left:2.5rem">Other Tools:</label>
+<button id = "eraser">Eraser</button>
+<button id = "clear">Clear</button>
+<a id = "link">Download Drawing</a>
+    </div>
+    <canvas id = "canvas">Sorry! Your browser does not support this web app!</canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>
